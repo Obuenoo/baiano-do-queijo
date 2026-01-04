@@ -7,10 +7,10 @@ const precos = {
 
 const fretes = {
   "Louveira": 0,
-  "Vinhedo": 15,
-  "Campinas": 25,
-  "Jundiaí": 20,
-  "Valinhos": 25,
+  "Vinhedo": 0,
+  "Campinas": 0,
+  "Jundiaí": 0,
+  "Valinhos": 0,
 };
 
 document.querySelectorAll("input, select").forEach(el => {
@@ -199,3 +199,4 @@ function voltarParaProdutos() {
 function voltarParaDados() {
   mostrarStep("step-dados");
 }
+
