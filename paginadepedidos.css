@@ -1,0 +1,200 @@
+:root {
+  --primary: #1f2933;
+  --accent: #d4a373;
+  --bg-dark: #111827;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #AED6F1;
+  color: black;
+  background-image: url('fundo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px 0 10px;
+  width: 100%;
+}
+
+.logo {
+  height: 180px;
+  width: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 480px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.card {
+  background: #fff;
+  color: #000;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+  margin-top: 0;
+  color: #558B2F;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.product span {
+  font-weight: 600;
+}
+
+.dadoscliente {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.cidade {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.pagamento {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.Itens {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: normal;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.Itens[type=number] {
+  width: 45px;
+  text-align: center;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.total-box {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.total-box div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.botaoadicional {
+  width: auto;          
+  flex: 1;              
+  padding: 14px;
+  margin: 10px;
+  background: var(--accent);
+  border: none;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botaoadicional:hover {
+  opacity: 0.9;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  color: white;
+}
+
+.adicionar {
+  background-color: white;
+  border-color: white;
+  border: none;
+  font-size: 1.1em;
+}
+
+.hidden {
+  display: none;
+}
+
+.voltar {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: #558B2F;
+  text-align: left;
+}
+
+.btnladoalado {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  width: 100%;
+}

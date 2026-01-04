@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baiano do Queijo</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="paginadepedidos.css">
+</head>
+
+<body>
+
+  <header class="cabecalho">
+    <div class="ApenasLogo">
+      <a href="index.html">
+        <img src="logo.png" class="logo" alt="Logotipo">
+      </a>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="card step" id="step-produtos">
+      <h2>Produtos:</h2>
+
+      <div class="product">
+        <span>Queijo Minas 1Kg<br>(R$40)</span>
+        <div class="contador">
+          <button onclick="alterar('q1', -1)" class="adicionar">−</button>
+          <input type="number" id="q1" value="0" min="0" max="10" readonly class="Itens">
+          <button onclick="alterar('q1', 1)" class="adicionar">+</button>
+        </div>
+      </div>
+
+      <div class="product">
+        <span>Queijo Cabacinha<br>(R$28)</span>
+        <div class="contador">
+          <button onclick="alterar('q2', -1)" class="adicionar">−</button>
+          <input type="number" id="q2" value="0" min="0" max="10" readonly class="Itens">
+          <button onclick="alterar('q2', 1)" class="adicionar">+</button>
+        </div>
+      </div>
+
+      <div class="product">
+        <span>Requeijão Caseiro 1Kg<br>(R$65)</span>
+        <div class="contador">
+          <button onclick="alterar('q3', -1)" class="adicionar">−</button>
+          <input type="number" id="q3" value="0" min="0" max="10" readonly class="Itens">
+          <button onclick="alterar('q3', 1)" class="adicionar">+</button>
+        </div>
+      </div>
+
+      <div class="product">
+        <span>Pacote com 2 tranças<br>(R$30)</span>
+        <div class="contador">
+          <button onclick="alterar('q4', -1)" class="adicionar">−</button>
+          <input type="number" id="q4" value="0" min="0" max="10" readonly class="Itens">
+          <button onclick="alterar('q4', 1)" class="adicionar">+</button>
+        </div>
+      </div>
+
+      <div class="btnladoalado">
+        <button onclick="irParaDados()" class="botaoadicional">Continuar</button>
+        <a href="aviso.html">
+          <button class="botaoadicional">Avise-me quando chegar</button>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="card step hidden" id="step-dados">
+
+      <button class="voltar" onclick="voltarParaProdutos()">VOLTAR</button>
+
+      <h2>Dados do Cliente:</h2>
+
+
+      <label>Nome</label>
+      <input id="nome" placeholder="Nome completo" class="dadoscliente">
+
+      <label>Rua</label>
+      <input id="rua" placeholder="Rua" class="dadoscliente">
+
+      <label>Número</label>
+      <input id="numero" placeholder="Número" class="dadoscliente">
+
+      <label>Bairro</label>
+      <input id="bairro" placeholder="Bairro" class="dadoscliente">
+
+      <label>Cidade</label>
+      <select id="cidade" class="cidade">
+        <option value="Louveira">Louveira (Sem frete)</option>
+        <option value="Vinhedo">Vinhedo</option>
+        <option value="Campinas">Campinas</option>
+        <option value="Jundiaí">Jundiaí</option>
+        <option value="Valinhos">Valinhos</option>
+      </select>
+
+      <label>Forma de pagamento</label>
+      <select id="pagamento" class="pagamento">
+        <option>Pix</option>
+        <option>Dinheiro</option>
+        <option>Cartão na entrega</option>
+      </select>
+
+      <button onclick="irParaResumo()" class="botaoadicional">Continuar</button>
+    </div>
+
+    <div class="card step hidden" id="step-resumo">
+
+      <button class="voltar" onclick="voltarParaDados()">VOLTAR</button>
+
+      <h2>Resumo:</h2>
+
+      <div class="total-box">
+        <div><span>Subtotal</span><span id="subtotal">R$0</span></div>
+        <div><span>Frete</span><span id="frete">R$0</span></div>
+        <div><strong>Total</strong><strong id="total">R$0</strong></div>
+      </div>
+
+      <button onclick="finalizarPedido()" class="botaoadicional">Finalizar pedido no WhatsApp</button>
+
+      <a href="aviso.html">
+        <button class="botaoadicional">Avise-me quando chegar</button>
+      </a>
+    </div>
+
+    <footer>Baiano do Queijo • Feito por Pedro Bueno</footer>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBThE-KRBen_ATxZpk3Hh0R_aYlF2KO3eo",
+      authDomain: "baiano-do-queijo.firebaseapp.com",
+      databaseURL: "https://baiano-do-queijo-default-rtdb.firebaseio.com",
+      projectId: "baiano-do-queijo",
+      storageBucket: "baiano-do-queijo.firebasestorage.app",
+      messagingSenderId: "275221144484",
+      appId: "1:275221144484:web:a734324080dc4e07f4d731"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
