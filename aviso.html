@@ -22,46 +22,74 @@
   <div class="container">
 
     <div class="card step" id="step-produtos">
-      <h2>Itens:</h2>
+      <h2>Avise-me quando chegar:</h2>
 
-      <div class="product">
-        <span>Queijo Minas 1Kg<br>(R$40)</span>
-        <div class="contador">
-          <button onclick="alterar('q1', -1)" class="adicionar">−</button>
-          <input type="number" id="q1" value="0" min="0" max="10" readonly class="Itens">
-          <button onclick="alterar('q1', 1)" class="adicionar">+</button>
+      <div class="card">
+        <div class="product">
+          <div class="produto-img">
+            <img src="queijominas.jpg" alt="Queijo Minas">
+          </div>
+          <div class="product-info">
+            <span class="nome">Queijo Minas 1Kg <br> <strong>(R$40)</strong></span>
+            <div class="contador">
+              <button onclick="alterar('q1', -1)" class="adicionar">−</button>
+              <input type="number" id="q1" value="0" min="0" max="10" readonly class="Itens">
+              <button onclick="alterar('q1', 1)" class="adicionar">+</button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="product">
-        <span>Queijo Cabacinha em Bola<br>(R$28)</span>
-        <div class="contador">
-          <button onclick="alterar('q2', -1)" class="adicionar">−</button>
-          <input type="number" id="q2" value="0" min="0" max="10" readonly class="Itens">
-          <button onclick="alterar('q2', 1)" class="adicionar">+</button>
+      <div class="card">
+        <div class="product">
+          <div class="produto-img">
+            <img src="queijocabacinha.jpg" alt="Queijo Cabacinha">
+          </div>
+          <div class="product-info">
+            <span class="nome">Queijo Cabacinha em Bola<br> <strong>(R$28)</strong></span>
+            <div class="contador">
+              <button onclick="alterar('q2', -1)" class="adicionar">−</button>
+              <input type="number" id="q2" value="0" min="0" max="10" readonly class="Itens">
+              <button onclick="alterar('q2', 1)" class="adicionar">+</button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="product">
-        <span>Requeijão Caseiro 1Kg<br>(R$65)</span>
-        <div class="contador">
-          <button onclick="alterar('q3', -1)" class="adicionar">−</button>
-          <input type="number" id="q3" value="0" min="0" max="10" readonly class="Itens">
-          <button onclick="alterar('q3', 1)" class="adicionar">+</button>
+      <div class="card">
+        <div class="product">
+          <div class="produto-img">
+            <img src="requeijao.jpeg" alt="Requeijão Caseiro">
+          </div>
+          <div class="product-info">
+            <span class="nome">Requeijão Caseiro 1Kg <br> <strong>(R$65)</strong></span>
+            <div class="contador">
+              <button onclick="alterar('q3', -1)" class="adicionar">−</button>
+              <input type="number" id="q3" value="0" min="0" max="10" readonly class="Itens">
+              <button onclick="alterar('q3', 1)" class="adicionar">+</button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="product">
-        <span>Pacote com 2 tranças<br>(R$30)</span>
-        <div class="contador">
-          <button onclick="alterar('q4', -1)" class="adicionar">−</button>
-          <input type="number" id="q4" value="0" min="0" max="10" readonly class="Itens">
-          <button onclick="alterar('q4', 1)" class="adicionar">+</button>
+      <div class="card">
+        <div class="product">
+          <div class="produto-img">
+            <img src="queijotranca.jpeg" alt="Pacote com 2 tranças">
+          </div>
+          <div class="product-info">
+            <span class="nome">Pacote com 2 Tranças<br> <strong>(R$30)</strong></span>
+            <div class="contador">
+              <button onclick="alterar('q4', -1)" class="adicionar">−</button>
+              <input type="number" id="q4" value="0" min="0" max="10" readonly class="Itens">
+              <button onclick="alterar('q4', 1)" class="adicionar">+</button>
+            </div>
+          </div>
         </div>
       </div>
+
       <button onclick="irParaDados()" class="botaoadicional">Continuar</button>
     </div>
-
 
     <div class="card step hidden" id="step-dados">
       <button class="voltar" onclick="voltarParaProdutos()">VOLTAR</button>
@@ -73,30 +101,24 @@
       <label>Cidade</label>
       <select id="cidade" class="cidade">
         <option value="Louveira">Louveira (Sem frete)</option>
-        <option value="Vinhedo">Vinhedo (Frete a combinar)</option>
+        <option value="Vinhedo">Vinhedo</option>
         <option value="Campinas">Campinas (Frete a combinar)</option>
         <option value="Jundiaí">Jundiaí (Frete a combinar)</option>
         <option value="Valinhos">Valinhos (Frete a combinar)</option>
       </select>
 
       <button onclick="irParaResumo()" class="botaoadicional">Continuar</button>
-
     </div>
 
     <div class="card step hidden" id="step-resumo">
-
       <button class="voltar" onclick="voltarParaDados()"> VOLTAR </button>
-
       <h2>Resumo:</h2>
-
       <div class="total-box">
         <div><span>Subtotal</span><span id="subtotal">R$0</span></div>
         <div><span>Frete</span><span id="frete">R$0</span></div>
         <div><strong>Total</strong><strong id="total">R$0</strong></div>
       </div>
-
-      <button onclick="finalizarItemFaltante()" class="botaoadicional">Finalizar Solicitação </button>
-
+      <button onclick="finalizarItemFaltante()" class="botaoadicional">Finalizar Solicitação</button>
     </div>
 
     <footer>Baiano do Queijo • Feito por Pedro Bueno</footer>
@@ -104,7 +126,6 @@
 
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
-
   <script>
     const firebaseConfig = {
       apiKey: "AIzaSyBThE-KRBen_ATxZpk3Hh0R_aYlF2KO3eo",
@@ -115,15 +136,9 @@
       messagingSenderId: "275221144484",
       appId: "1:275221144484:web:a734324080dc4e07f4d731"
     };
-
     firebase.initializeApp(firebaseConfig);
     const database = firebase.database();
   </script>
-
   <script src="script.js"></script>
-
 </body>
-
 </html>
-
-
