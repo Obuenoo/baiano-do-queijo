@@ -110,7 +110,7 @@ h2 {
   margin-top: 6px;
   margin-bottom: 12px;
   border-radius: 10px;
-  border: 1px solid #ccc;
+  border: none;
   text-align: center;
   line-height: normal;
 }
@@ -198,3 +198,59 @@ footer {
   margin-top: 20px;
   width: 100%;
 }
+
+.product {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.produto-img img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-info .nome {
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.status {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.status.esgotado {
+  color: #d32f2f;
+}
+
+.contador {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.adicionar {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+
+
