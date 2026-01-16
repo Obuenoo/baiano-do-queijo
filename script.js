@@ -21,6 +21,7 @@ const produtosRef = database.ref("produtos");
 
 produtosRef.on("value", snapshot => {
   const produtos = snapshot.val();
+  console.log("Dados recebidos do Firebase:", produtos);
   if (!produtos) return;
 
   Object.keys(produtos).forEach(id => {
@@ -35,16 +36,16 @@ produtosRef.on("value", snapshot => {
     const spanNome = productDiv ? productDiv.querySelector('span') : null;
 
     let label = document.getElementById(`estoque-${id}`);
-    
+
     if (!label && spanNome) {
       label = document.createElement("small");
       label.id = `estoque-${id}`;
-      spanNome.appendChild(label); 
+      spanNome.appendChild(label);
     }
 
     if (label) {
       if (estoque <= 0) {
-        label.innerText ="• ESGOTADO";
+        label.innerText = "• ESGOTADO";
         label.style.color = "red";
         input.disabled = true;
       } else {
@@ -187,7 +188,7 @@ function irParaDados() {
 }
 
 function irParaResumo() {
-  atualizarValores(); 
+  atualizarValores();
   mostrarStep("step-resumo");
 }
 
