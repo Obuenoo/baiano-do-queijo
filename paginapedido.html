@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baiano do Queijo</title>
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="imagens-baiano/favicon.png">
   <link rel="stylesheet" href="paginadepedidos.css">
 </head>
 
@@ -14,13 +14,13 @@
   <header class="cabecalho">
     <div class="ApenasLogo">
       <a href="index.html">
-        <img src="logo.png" class="logo" alt="Logotipo">
+        <img src="imagens-baiano/logo.png" class="logo" alt="Logotipo">
       </a>
     </div>
   </header>
 
   <div class="container">
-    
+
 
     <div class="card step" id="step-produtos">
       <h2>Produtos:</h2>
@@ -29,7 +29,7 @@
         <div class="product">
 
           <div class="produto-img">
-            <img src="queijominas.jpg" alt="Queijo Minas">
+            <img src="imagens-baiano/queijominas.jpg" alt="Queijo Minas">
           </div>
 
           <div class="product-info">
@@ -52,7 +52,7 @@
         <div class="product">
 
           <div class="produto-img">
-            <img src="queijocabacinha.jpg" alt="Queijo Cabacinha em bola">
+            <img src="imagens-baiano/queijocabacinha.jpg" alt="Queijo Cabacinha em bola">
           </div>
 
           <div class="product-info">
@@ -74,7 +74,7 @@
         <div class="product">
 
           <div class="produto-img">
-            <img src="requeijao.jpg" alt="Requeijão Caseiro">
+            <img src="imagens-baiano/requeijao.jpg" alt="Requeijão Caseiro 1Kg">
           </div>
 
           <div class="product-info">
@@ -96,7 +96,29 @@
         <div class="product">
 
           <div class="produto-img">
-            <img src="queijotranca.jpeg" alt="Pacote com 2 tranças">
+            <img src="imagens-baiano/requeijao 500g.jpeg" alt="Requeijão Caseiro 500g">
+          </div>
+
+          <div class="product-info">
+            <span class="nome">
+              Requeijão Caseiro 500 g <br>
+              <strong>(R$35)</strong>
+            </span>
+
+            <div class="contador">
+              <button onclick="alterar('q7', -1)" class="adicionar">−</button>
+              <input type="number" id="q7" value="0" min="0" max="10" readonly class="Itens">
+              <button onclick="alterar('q7', 1)" class="adicionar">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="product">
+
+          <div class="produto-img">
+            <img src="imagens-baiano/queijotranca.jpeg" alt="Pacote com 2 tranças">
           </div>
 
           <div class="product-info">
