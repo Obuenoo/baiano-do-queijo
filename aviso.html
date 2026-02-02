@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baiano do Queijo</title>
-  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Baiano do Queijo - Avise-me</title>
+  <link rel="icon" type="image/png" href="imagens-baiano/favicon.png">
   <link rel="stylesheet" href="paginadepedidos.css">
 </head>
 
@@ -14,7 +14,7 @@
   <header class="cabecalho">
     <div class="ApenasLogo">
       <a href="index.html">
-        <img src="logo.png" class="logo" alt="Logotipo">
+        <img src="imagens-baiano/logo.png" class="logo" alt="Logotipo">
       </a>
     </div>
   </header>
@@ -24,65 +24,145 @@
     <div class="card step" id="step-produtos">
       <h2>Avise-me quando chegar:</h2>
 
-      <div class="card">
+      <div class="card item-escondivel">
         <div class="product">
           <div class="produto-img">
-            <img src="queijominas.jpg" alt="Queijo Minas">
+            <img src="imagens-baiano/queijominas.jpg" alt="Queijo Minas">
           </div>
           <div class="product-info">
             <span class="nome">Queijo Minas 1Kg <br> <strong>(R$40)</strong></span>
             <div class="contador">
               <button onclick="alterar('q1', -1)" class="adicionar">−</button>
-              <input type="number" id="q1" value="0" min="0" max="10" readonly class="Itens">
+              <input type="number" id="q1" value="0" min="0" max="99" readonly class="Itens">
               <button onclick="alterar('q1', 1)" class="adicionar">+</button>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="card">
+      <div class="card item-escondivel">
         <div class="product">
           <div class="produto-img">
-            <img src="queijocabacinha.jpg" alt="Queijo Cabacinha">
+            <img src="imagens-baiano/queijocabacinha.jpg" alt="Queijo Cabacinha">
           </div>
           <div class="product-info">
             <span class="nome">Queijo Cabacinha em Bola<br> <strong>(R$28)</strong></span>
             <div class="contador">
               <button onclick="alterar('q2', -1)" class="adicionar">−</button>
-              <input type="number" id="q2" value="0" min="0" max="10" readonly class="Itens">
+              <input type="number" id="q2" value="0" min="0" max="99" readonly class="Itens">
               <button onclick="alterar('q2', 1)" class="adicionar">+</button>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="card">
+      <div class="card item-escondivel">
         <div class="product">
           <div class="produto-img">
-            <img src="requeijao.jpg" alt="Requeijão Caseiro">
+            <img src="imagens-baiano/requeijao.jpg" alt="Requeijão Caseiro 1Kg">
           </div>
           <div class="product-info">
             <span class="nome">Requeijão Caseiro 1Kg <br> <strong>(R$65)</strong></span>
             <div class="contador">
               <button onclick="alterar('q3', -1)" class="adicionar">−</button>
-              <input type="number" id="q3" value="0" min="0" max="10" readonly class="Itens">
+              <input type="number" id="q3" value="0" min="0" max="99" readonly class="Itens">
               <button onclick="alterar('q3', 1)" class="adicionar">+</button>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="card">
+      <div class="card item-escondivel">
         <div class="product">
           <div class="produto-img">
-            <img src="queijotranca.jpeg" alt="Pacote com 2 tranças">
+            <img src="imagens-baiano/requeijao 500g.jpeg" alt="Requeijão Caseiro 500g">
+          </div>
+          <div class="product-info">
+            <span class="nome">Requeijão Caseiro 500 g <br> <strong>(R$35)</strong></span>
+            <div class="contador">
+              <button onclick="alterar('q7', -1)" class="adicionar">−</button>
+              <input type="number" id="q7" value="0" min="0" max="99" readonly class="Itens">
+              <button onclick="alterar('q7', 1)" class="adicionar">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card item-escondivel">
+        <div class="product">
+          <div class="produto-img">
+            <img src="imagens-baiano/queijotranca.jpeg" alt="Pacote com 2 tranças">
           </div>
           <div class="product-info">
             <span class="nome">Pacote com 2 Tranças<br> <strong>(R$30)</strong></span>
             <div class="contador">
               <button onclick="alterar('q4', -1)" class="adicionar">−</button>
-              <input type="number" id="q4" value="0" min="0" max="10" readonly class="Itens">
+              <input type="number" id="q4" value="0" min="0" max="99" readonly class="Itens">
               <button onclick="alterar('q4', 1)" class="adicionar">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card item-escondivel">
+        <div class="product">
+          <div class="produto-img">
+            <img src="" alt="doce de leite 300 ml">
+          </div>
+          <div class="product-info">
+            <span class="nome">Doce de leite Caseiro - 300 ml <br> <strong>(R$18)</strong></span>
+            <div class="contador">
+              <button onclick="alterar('q5', -1)" class="adicionar">−</button>
+              <input type="number" id="q5" value="0" min="0" max="99" readonly class="Itens">
+              <button onclick="alterar('q5', 1)" class="adicionar">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card item-escondivel">
+        <div class="product">
+          <div class="produto-img">
+            <img src="" alt="doce de leite 600ml">
+          </div>
+          <div class="product-info">
+            <span class="nome">Doce de leite Caseiro - 600 ml <br> <strong>(R$30)</strong></span>
+            <div class="contador">
+              <button onclick="alterar('q6', -1)" class="adicionar">−</button>
+              <input type="number" id="q6" value="0" min="0" max="99" readonly class="Itens">
+              <button onclick="alterar('q6', 1)" class="adicionar">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card item-escondivel">
+        <div class="product">
+          <div class="produto-img">
+            <img src="imagens-baiano/salame seara gourmet.png" alt="salame seara">
+          </div>
+          <div class="product-info">
+            <span class="nome">Salame Seara Gourmet 100g<br> <strong>(R$16)</strong></span>
+            <div class="contador">
+              <button onclick="alterar('q8', -1)" class="adicionar">−</button>
+              <input type="number" id="q8" value="0" min="0" max="99" readonly class="Itens">
+              <button onclick="alterar('q8', 1)" class="adicionar">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card item-escondivel">
+        <div class="product">
+          <div class="produto-img">
+            <img src="imagens-baiano/doce de leite corte.jpg" alt="doce de leite de corte">
+          </div>
+          <div class="product-info">
+            <span class="nome">Doce de leite de corte 120 g<br> <strong>(R$8)</strong></span>
+            <div class="contador">
+              <button onclick="alterar('q9', -1)" class="adicionar">−</button>
+              <input type="number" id="q9" value="0" min="0" max="99" readonly class="Itens">
+              <button onclick="alterar('q9', 1)" class="adicionar">+</button>
             </div>
           </div>
         </div>
@@ -94,10 +174,8 @@
     <div class="card step hidden" id="step-dados">
       <button class="voltar" onclick="voltarParaProdutos()">VOLTAR</button>
       <h2>Informações:</h2>
-
       <label>Nome</label>
       <input id="nome" placeholder="Nome completo" class="dadoscliente">
-
       <label>Cidade</label>
       <select id="cidade" class="cidade">
         <option value="Louveira">Louveira (Sem frete)</option>
@@ -106,7 +184,6 @@
         <option value="Jundiaí">Jundiaí (Frete a combinar)</option>
         <option value="Valinhos">Valinhos (Frete a combinar)</option>
       </select>
-
       <button onclick="irParaResumo()" class="botaoadicional">Continuar</button>
     </div>
 
@@ -141,4 +218,5 @@
   </script>
   <script src="script.js"></script>
 </body>
+
 </html>
